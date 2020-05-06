@@ -5,16 +5,16 @@
   
 
   
-  <title>Task01：Ubuntu安装与配置 | 我的主页</title>
+  <title>Task02：Ubuntu基本设置 | 我的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="认识Ubuntu 最流行的发行版 与Rasbian同源于Debian Raspberry Pi 的操作系统   各发行版的指令系统基本一致 版本获取：https:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  虚拟机 物理机安装：先装win，再装Ubuntu 虚拟机安装：最保险的方式 Linux Subsystem for Windows 10 宿主中虚拟出软硬件 相对的：客户机 宿">
+  <meta name="description" content="拓展：虚拟机镜像分享站点：https:&#x2F;&#x2F;www&#x2F;osboxes.org&#x2F;ubuntusf.net 操作系统 用户、应用软件、操作系统（内核（管理硬件系统）-系统调用，终端命令，图形界面））、硬件系统 类型 桌面：Windows Mac Linux 服务器：Unix（最早 美国） Linux Windows Server 嵌入式：Android iOS HarmonyOS    Linux 内核：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Task01：Ubuntu安装与配置">
-<meta property="og:url" content="http://guardlv.github.io/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="Task02：Ubuntu基本设置">
+<meta property="og:url" content="http://guardlv.github.io/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/index.html">
 <meta property="og:site_name" content="我的主页">
-<meta property="og:description" content="认识Ubuntu 最流行的发行版 与Rasbian同源于Debian Raspberry Pi 的操作系统   各发行版的指令系统基本一致 版本获取：https:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  虚拟机 物理机安装：先装win，再装Ubuntu 虚拟机安装：最保险的方式 Linux Subsystem for Windows 10 宿主中虚拟出软硬件 相对的：客户机 宿">
-<meta property="article:published_time" content="2020-04-22T03:05:06.000Z">
-<meta property="article:modified_time" content="2020-04-22T03:24:06.000Z">
+<meta property="og:description" content="拓展：虚拟机镜像分享站点：https:&#x2F;&#x2F;www&#x2F;osboxes.org&#x2F;ubuntusf.net 操作系统 用户、应用软件、操作系统（内核（管理硬件系统）-系统调用，终端命令，图形界面））、硬件系统 类型 桌面：Windows Mac Linux 服务器：Unix（最早 美国） Linux Windows Server 嵌入式：Android iOS HarmonyOS    Linux 内核：">
+<meta property="article:published_time" content="2020-04-22T03:05:30.000Z">
+<meta property="article:modified_time" content="2020-04-22T03:24:30.000Z">
 <meta property="article:author" content="Skylar">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary">
@@ -70,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Task01：Ubuntu安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Task02：Ubuntu基本设置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-22T03:05:06.000Z" itemprop="datePublished">2020-04-22</time>
+    <a href="/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" class="article-date">
+  <time datetime="2020-04-22T03:05:30.000Z" itemprop="datePublished">2020-04-22</time>
 </a>
     
   <div class="article-category">
@@ -88,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Task01：Ubuntu安装与配置
+      Task02：Ubuntu基本设置
     </h1>
   
 
@@ -96,44 +96,76 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="认识Ubuntu"><a href="#认识Ubuntu" class="headerlink" title="认识Ubuntu"></a>认识Ubuntu</h3><ul>
-<li>最流行的发行版</li>
-<li>与Rasbian同源于Debian<ul>
-<li>Raspberry Pi 的操作系统</li>
-</ul>
-</li>
-<li>各发行版的指令系统基本一致</li>
-<li>版本获取：<a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">https://ubuntu.com/download/desktop</a></li>
-</ul>
-<h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><ul>
-<li>物理机安装：先装win，再装Ubuntu</li>
-<li>虚拟机安装：最保险的方式</li>
-<li>Linux Subsystem for Windows 10</li>
-<li>宿主中虚拟出软硬件</li>
-<li>相对的：客户机</li>
-<li>宿主机于客户机完全独立</li>
-<li>虚拟机软件<ul>
-<li>VMware：Win、Mac跨平台</li>
-<li>Parallels Desktop：Mac</li>
-<li>Hyper-V：内置在Windows Pro+，Server</li>
-<li>Virtual Box：开源，Win、Mac、Linux跨平台<ul>
-<li>拓展：比较虚拟机与Docker</li>
+        <p>拓展：虚拟机镜像分享站点：<a href="https://www/osboxes.org/ubuntusf.net" target="_blank" rel="noopener">https://www/osboxes.org/ubuntusf.net</a></p>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ul>
+<li>用户、应用软件、操作系统（内核（管理硬件系统）-系统调用，终端命令，图形界面））、硬件系统</li>
+<li>类型<ul>
+<li>桌面：Windows Mac Linux</li>
+<li>服务器：Unix（最早 美国） Linux Windows Server</li>
+<li>嵌入式：Android iOS HarmonyOS</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>开始之前<ul>
-<li>打开BIOS中的虚拟化选项</li>
-<li>不同主板BIOS选项各有差异</li>
-<li>Virtualization Intel Virtual Technology VM</li>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><ul>
+<li>内核：运行程序和管理资源的核心程序，提供了硬件与应用程序间的抽象层。内核具备基本的硬件调用功能（终 端命令→系统调用→硬件资源）</li>
+<li>发行版：内核-基础应用，Ubuntu、CentOS、 Deepin、 UOS…..</li>
+</ul>
+<h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><h4 id="Ubuntu版本"><a href="#Ubuntu版本" class="headerlink" title="Ubuntu版本"></a>Ubuntu版本</h4><ul>
+<li>Desktop：桌面版本，自带Gnome图形环境</li>
+<li>Server：服务器版本，默认没有图形界面</li>
+<li>IoT：loT= Internet of Things，物联网。支持树莓派、Intel NUC等</li>
+<li>Cloud：VPS版， 针对Amazon AWS、Microsoft Azure等优化</li>
+</ul>
+<h4 id="主要衍生版本"><a href="#主要衍生版本" class="headerlink" title="主要衍生版本"></a>主要衍生版本</h4><ul>
+<li>Kubuntu: KDE代 替Gnome</li>
+<li>Xubuntu : Xfce代 替Gnome</li>
+<li>Lubuntu: Lxde代替Gnome</li>
+<li>Ubuntu Studio:集成开源媒体创作工具</li>
+<li>UbuntuKylin （优麒麟） :中国专用版</li>
+</ul>
+<h4 id="版本号"><a href="#版本号" class="headerlink" title="版本号"></a>版本号</h4><ul>
+<li>类型：普通版本，LTS版本（Long Term Support，2年）</li>
+<li>版本号：年代+月份 目前为止每年4、10发布新版</li>
+</ul>
+<h4 id="图形化界面"><a href="#图形化界面" class="headerlink" title="图形化界面"></a>图形化界面</h4><ul>
+<li>统一菜单</li>
+<li>Dock</li>
+<li>程序启动器</li>
+</ul>
+<h4 id="熟悉终端"><a href="#熟悉终端" class="headerlink" title="熟悉终端"></a>熟悉终端</h4><ul>
+<li>启动：Terminal、收藏到Dock栏;</li>
+<li>字符尺寸<ul>
+<li>放大: Ctrl-Shift+=; 缩小: Ctrl–</li>
+<li>属性/快捷键</li>
 </ul>
 </li>
+</ul>
+<h4 id="安装新软件"><a href="#安装新软件" class="headerlink" title="安装新软件"></a>安装新软件</h4><ul>
+<li>比AppStore更早的应用商城</li>
+<li>“Ubuntu软件”，搜索并安装</li>
+<li>本课程中不推荐乱安装</li>
+</ul>
+<h4 id="配置更新源"><a href="#配置更新源" class="headerlink" title="配置更新源"></a>配置更新源</h4><ul>
+<li>软件更新</li>
+<li>选择中国源</li>
+<li>也可测试</li>
+</ul>
+<h4 id="用户账户"><a href="#用户账户" class="headerlink" title="用户账户"></a>用户账户</h4><ul>
+<li>默认账号均为标准账号</li>
+<li>安装、配置时均提示输入密码临时调用管理员权限</li>
+<li>命令行中如何临时使用管理员权限- sudo</li>
+<li>密码输入无提示</li>
+</ul>
+<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><ul>
+<li>安装软件：<code>sudo apt-get install package_name</code></li>
+<li>删除：<code>sudo apt-get remove package_name</code></li>
+<li>更新：<code>sudo apt-get update package_name</code></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ck9v934yt000032axg85bgow4" class="article-share-link">Share</a>
+      <a data-url="http://guardlv.github.io/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" data-id="ck9vbgvqo0000tjax68j2bpex" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
@@ -144,15 +176,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/22/Task03%EF%BC%9ALinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Task02：Ubuntu基本设置
+          Task03：Linux 基本命令
         
       </div>
     </a>
   
+  
+    <a href="/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Task01：Ubuntu安装与配置</div>
+    </a>
   
 </nav>
 

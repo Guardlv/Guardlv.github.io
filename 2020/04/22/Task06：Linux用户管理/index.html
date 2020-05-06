@@ -5,16 +5,16 @@
   
 
   
-  <title>Task01：Ubuntu安装与配置 | 我的主页</title>
+  <title>Task06：Linux用户管理 | 我的主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="认识Ubuntu 最流行的发行版 与Rasbian同源于Debian Raspberry Pi 的操作系统   各发行版的指令系统基本一致 版本获取：https:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  虚拟机 物理机安装：先装win，再装Ubuntu 虚拟机安装：最保险的方式 Linux Subsystem for Windows 10 宿主中虚拟出软硬件 相对的：客户机 宿">
+  <meta name="description" content="创建、删除组 创建组：groupadd 删除组：groupdel tip: 创建新用户时，会自动创建同名用户组    查看组信息 cat &#x2F;etc&#x2F;group  修改文件或目录的所在组 sudo chgrp 组名、文件或目录 默认不修改子目录组信息，要递归修改： chgrp -R 组名 目录名  添加用户：useradd -g:设置所在用户组 -m :自动创建家目录  查看用户信息 cat &#x2F;et">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Task01：Ubuntu安装与配置">
-<meta property="og:url" content="http://guardlv.github.io/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="Task06：Linux用户管理">
+<meta property="og:url" content="http://guardlv.github.io/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="我的主页">
-<meta property="og:description" content="认识Ubuntu 最流行的发行版 与Rasbian同源于Debian Raspberry Pi 的操作系统   各发行版的指令系统基本一致 版本获取：https:&#x2F;&#x2F;ubuntu.com&#x2F;download&#x2F;desktop  虚拟机 物理机安装：先装win，再装Ubuntu 虚拟机安装：最保险的方式 Linux Subsystem for Windows 10 宿主中虚拟出软硬件 相对的：客户机 宿">
-<meta property="article:published_time" content="2020-04-22T03:05:06.000Z">
-<meta property="article:modified_time" content="2020-04-22T03:24:06.000Z">
+<meta property="og:description" content="创建、删除组 创建组：groupadd 删除组：groupdel tip: 创建新用户时，会自动创建同名用户组    查看组信息 cat &#x2F;etc&#x2F;group  修改文件或目录的所在组 sudo chgrp 组名、文件或目录 默认不修改子目录组信息，要递归修改： chgrp -R 组名 目录名  添加用户：useradd -g:设置所在用户组 -m :自动创建家目录  查看用户信息 cat &#x2F;et">
+<meta property="article:published_time" content="2020-04-22T03:07:30.000Z">
+<meta property="article:modified_time" content="2020-04-22T03:07:30.000Z">
 <meta property="article:author" content="Skylar">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary">
@@ -70,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Task01：Ubuntu安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Task06：Linux用户管理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-22T03:05:06.000Z" itemprop="datePublished">2020-04-22</time>
+    <a href="/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" class="article-date">
+  <time datetime="2020-04-22T03:07:30.000Z" itemprop="datePublished">2020-04-22</time>
 </a>
     
   <div class="article-category">
@@ -88,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Task01：Ubuntu安装与配置
+      Task06：Linux用户管理
     </h1>
   
 
@@ -96,44 +96,68 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="认识Ubuntu"><a href="#认识Ubuntu" class="headerlink" title="认识Ubuntu"></a>认识Ubuntu</h3><ul>
-<li>最流行的发行版</li>
-<li>与Rasbian同源于Debian<ul>
-<li>Raspberry Pi 的操作系统</li>
-</ul>
-</li>
-<li>各发行版的指令系统基本一致</li>
-<li>版本获取：<a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">https://ubuntu.com/download/desktop</a></li>
-</ul>
-<h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><ul>
-<li>物理机安装：先装win，再装Ubuntu</li>
-<li>虚拟机安装：最保险的方式</li>
-<li>Linux Subsystem for Windows 10</li>
-<li>宿主中虚拟出软硬件</li>
-<li>相对的：客户机</li>
-<li>宿主机于客户机完全独立</li>
-<li>虚拟机软件<ul>
-<li>VMware：Win、Mac跨平台</li>
-<li>Parallels Desktop：Mac</li>
-<li>Hyper-V：内置在Windows Pro+，Server</li>
-<li>Virtual Box：开源，Win、Mac、Linux跨平台<ul>
-<li>拓展：比较虚拟机与Docker</li>
+        <h3 id="创建、删除组"><a href="#创建、删除组" class="headerlink" title="创建、删除组"></a>创建、删除组</h3><ul>
+<li>创建组：groupadd</li>
+<li>删除组：groupdel<ul>
+<li>tip: 创建新用户时，会自动创建同名用户组</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>开始之前<ul>
-<li>打开BIOS中的虚拟化选项</li>
-<li>不同主板BIOS选项各有差异</li>
-<li>Virtualization Intel Virtual Technology VM</li>
+<h3 id="查看组信息"><a href="#查看组信息" class="headerlink" title="查看组信息"></a>查看组信息</h3><ul>
+<li>cat /etc/group</li>
+</ul>
+<h3 id="修改文件或目录的所在组"><a href="#修改文件或目录的所在组" class="headerlink" title="修改文件或目录的所在组"></a>修改文件或目录的所在组</h3><ul>
+<li>sudo chgrp 组名、文件或目录</li>
+<li>默认不修改子目录组信息，要递归修改：</li>
+<li>chgrp -R 组名 目录名</li>
+</ul>
+<h3 id="添加用户：useradd"><a href="#添加用户：useradd" class="headerlink" title="添加用户：useradd"></a>添加用户：useradd</h3><ul>
+<li>-g:设置所在用户组</li>
+<li>-m :自动创建家目录</li>
+</ul>
+<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><ul>
+<li>cat /etc/passwd</li>
+<li>cat /etc/passwd | grep 用户名</li>
+<li>lester:   x:  1000:  1000:  Lester,,,  :   /home/lester  :/bin/bash<ul>
+<li>lester:用户名</li>
+<li>x:已经设置密码</li>
+<li>1000：用户标识</li>
+<li>1000: 组标识</li>
+<li>Lester: 用户名</li>
+<li>/home/lester: 家目录</li>
+<li>/bin/bash： 登录时使用的bash</li>
 </ul>
 </li>
+</ul>
+<h3 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h3><ul>
+<li>passwd 用户名</li>
+<li>不跟用户名，修改自己的密码</li>
+</ul>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><ul>
+<li>userdel 用户名</li>
+<li>-r: 删除用户时，同时删除家目录</li>
+</ul>
+<h3 id="查看id"><a href="#查看id" class="headerlink" title="查看id"></a>查看id</h3><ul>
+<li>方法一： cat /etc/passwd | grep 用户名</li>
+<li>方法二：id <ul>
+<li>id 用户名：显示特定用户的标识</li>
+<li>id ：显示当前用户的标识</li>
+</ul>
+</li>
+</ul>
+<h3 id="查看当前登录的用户：who"><a href="#查看当前登录的用户：who" class="headerlink" title="查看当前登录的用户：who"></a>查看当前登录的用户：who</h3><ul>
+<li>：0表示当前终端</li>
+</ul>
+<h3 id="查看当前用户的账号名：whoami"><a href="#查看当前用户的账号名：whoami" class="headerlink" title="查看当前用户的账号名：whoami"></a>查看当前用户的账号名：whoami</h3><h3 id="解决新建用户无法使用sudo"><a href="#解决新建用户无法使用sudo" class="headerlink" title="解决新建用户无法使用sudo"></a>解决新建用户无法使用sudo</h3><ul>
+<li>原理：只有在sudo组，成为成员才可以使用sudo组权限，称为sudoer</li>
+<li>usermode更改用户的组信息</li>
+<li>sudo usermod -a -G sudo roy</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://guardlv.github.io/2020/04/22/Task01%EF%BC%9AUbuntu%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="ck9v934yt000032axg85bgow4" class="article-share-link">Share</a>
+      <a data-url="http://guardlv.github.io/2020/04/22/Task06%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" data-id="ck9vbgvr70008tjax44tnaihj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/" rel="tag">Learning</a></li></ul>
@@ -144,15 +168,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/04/22/Task02%EF%BC%9AUbuntu%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/22/Task07%EF%BC%9A%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%A1%88/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Task02：Ubuntu基本设置
+          Task07：远程文件传输的几种方案
         
       </div>
     </a>
   
+  
+    <a href="/2020/04/22/Task05%EF%BC%9ALinux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Task05：Linux用户权限</div>
+    </a>
   
 </nav>
 
